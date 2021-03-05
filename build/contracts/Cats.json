@@ -68,7 +68,7 @@
   "bytecode": "0x608060405234801561001057600080fd5b5033600560006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506101f9806100616000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c8063254fa81a146100515780633072cf601461007f5780638da5cb5b146100a1578063aad621fd146100eb575b600080fd5b61007d6004803603602081101561006757600080fd5b8101908080359060200190929190505050610109565b005b61008761014f565b604051808215151515815260200191505060405180910390f35b6100a9610162565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6100f3610188565b6040518082815260200191505060405180910390f35b80600060405180807f4361747300000000000000000000000000000000000000000000000000000000815250600401905090815260200160405180910390208190555050565b600560149054906101000a900460ff1681565b600560009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60008060405180807f4361747300000000000000000000000000000000000000000000000000000000815250600401905090815260200160405180910390205490509056fea165627a7a7230582047e7df519bc182f40267308a01460666ed2c58d6ac15f18f0dc5c2fdc43eeea30029",
   "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c8063254fa81a146100515780633072cf601461007f5780638da5cb5b146100a1578063aad621fd146100eb575b600080fd5b61007d6004803603602081101561006757600080fd5b8101908080359060200190929190505050610109565b005b61008761014f565b604051808215151515815260200191505060405180910390f35b6100a9610162565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6100f3610188565b6040518082815260200191505060405180910390f35b80600060405180807f4361747300000000000000000000000000000000000000000000000000000000815250600401905090815260200160405180910390208190555050565b600560149054906101000a900460ff1681565b600560009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60008060405180807f4361747300000000000000000000000000000000000000000000000000000000815250600401905090815260200160405180910390205490509056fea165627a7a7230582047e7df519bc182f40267308a01460666ed2c58d6ac15f18f0dc5c2fdc43eeea30029",
   "sourceMap": "50:362:0:-;;;161:47;8:9:-1;5:2;;;30:1;27;20:12;5:2;161:47:0;195:10;187:5;;:18;;;;;;;;;;;;;;;;;;50:362;;;;;;",
-  "deployedSourceMap": "50:362:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;50:362:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;317:93;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;317:93:0;;;;;;;;;;;;;;;;;:::i;:::-;;278:24:3;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;256:20;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;214:98:0;;;:::i;:::-;;;;;;;;;;;;;;;;;;;317:93;397:6;374:12;:20;;;;;;;;;;;;;;;;;;;;;;;;:29;;;;317:93;:::o;278:24:3:-;;;;;;;;;;;;;:::o;256:20::-;;;;;;;;;;;;;:::o;214:98:0:-;260:7;285:12;:20;;;;;;;;;;;;;;;;;;;;;;;;;278:27;;214:98;:::o",
+  "deployedSourceMap": "50:362:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;50:362:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;317:93;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;317:93:0;;;;;;;;;;;;;;;;;:::i;:::-;;278:24:4;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;256:20;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;214:98:0;;;:::i;:::-;;;;;;;;;;;;;;;;;;;317:93;397:6;374:12;:20;;;;;;;;;;;;;;;;;;;;;;;;:29;;;;317:93;:::o;278:24:4:-;;;;;;;;;;;;;:::o;256:20::-;;;;;;;;;;;;;:::o;214:98:0:-;260:7;285:12;:20;;;;;;;;;;;;;;;;;;;;;;;;;278:27;;214:98;:::o",
   "source": "pragma solidity ^0.5.2;\n\nimport \"./Storage.sol\";\n\ncontract Cats is Storage{\n\n    modifier onlyOwner{\n        require(msg.sender == owner);\n        _;\n    }\n    \nconstructor() public{\n    owner = msg.sender;\n}\n\n    function getNumberOFCats()public view returns(uint256){\n        return _uintStorage[\"Cats\"];\n    }\n    function setNumberOfCats(uint256 _toSet)public {\n        _uintStorage[\"Cats\"] = _toSet;\n    }\n}",
   "sourcePath": "/Users/peshangalo/Documents/Bachelor/Ivan of Tech/proxyContract/contracts/Cats.sol",
   "ast": {
@@ -98,7 +98,7 @@
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 48,
-        "sourceUnit": 158,
+        "sourceUnit": 208,
         "src": "25:23:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -112,10 +112,10 @@
               "id": 3,
               "name": "Storage",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 157,
+              "referencedDeclaration": 207,
               "src": "67:7:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Storage_$157",
+                "typeIdentifier": "t_contract$_Storage_$207",
                 "typeString": "contract Storage"
               }
             },
@@ -125,7 +125,7 @@
           }
         ],
         "contractDependencies": [
-          157
+          207
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -133,7 +133,7 @@
         "id": 47,
         "linearizedBaseContracts": [
           47,
-          157
+          207
         ],
         "name": "Cats",
         "nodeType": "ContractDefinition",
@@ -167,7 +167,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 172,
+                            "referencedDeclaration": 222,
                             "src": "117:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -196,7 +196,7 @@
                           "name": "owner",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 154,
+                          "referencedDeclaration": 204,
                           "src": "131:5:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -221,10 +221,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        175,
-                        176
+                        225,
+                        226
                       ],
-                      "referencedDeclaration": 175,
+                      "referencedDeclaration": 225,
                       "src": "109:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -289,7 +289,7 @@
                       "name": "owner",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 154,
+                      "referencedDeclaration": 204,
                       "src": "187:5:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -306,7 +306,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 172,
+                        "referencedDeclaration": 222,
                         "src": "195:3:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -379,7 +379,7 @@
                       "name": "_uintStorage",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 136,
+                      "referencedDeclaration": 186,
                       "src": "285:12:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_string_memory_$_t_uint256_$",
@@ -497,7 +497,7 @@
                         "name": "_uintStorage",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 136,
+                        "referencedDeclaration": 186,
                         "src": "374:12:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_string_memory_$_t_uint256_$",
@@ -647,7 +647,7 @@
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 48,
-        "sourceUnit": 158,
+        "sourceUnit": 208,
         "src": "25:23:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -661,10 +661,10 @@
               "id": 3,
               "name": "Storage",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 157,
+              "referencedDeclaration": 207,
               "src": "67:7:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Storage_$157",
+                "typeIdentifier": "t_contract$_Storage_$207",
                 "typeString": "contract Storage"
               }
             },
@@ -674,7 +674,7 @@
           }
         ],
         "contractDependencies": [
-          157
+          207
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -682,7 +682,7 @@
         "id": 47,
         "linearizedBaseContracts": [
           47,
-          157
+          207
         ],
         "name": "Cats",
         "nodeType": "ContractDefinition",
@@ -716,7 +716,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 172,
+                            "referencedDeclaration": 222,
                             "src": "117:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -745,7 +745,7 @@
                           "name": "owner",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 154,
+                          "referencedDeclaration": 204,
                           "src": "131:5:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -770,10 +770,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        175,
-                        176
+                        225,
+                        226
                       ],
-                      "referencedDeclaration": 175,
+                      "referencedDeclaration": 225,
                       "src": "109:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -838,7 +838,7 @@
                       "name": "owner",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 154,
+                      "referencedDeclaration": 204,
                       "src": "187:5:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -855,7 +855,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 172,
+                        "referencedDeclaration": 222,
                         "src": "195:3:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -928,7 +928,7 @@
                       "name": "_uintStorage",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 136,
+                      "referencedDeclaration": 186,
                       "src": "285:12:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_string_memory_$_t_uint256_$",
@@ -1046,7 +1046,7 @@
                         "name": "_uintStorage",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 136,
+                        "referencedDeclaration": 186,
                         "src": "374:12:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_string_memory_$_t_uint256_$",
@@ -1175,7 +1175,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.16",
-  "updatedAt": "2021-03-05T13:32:49.390Z",
+  "updatedAt": "2021-03-05T14:29:57.035Z",
   "devdoc": {
     "methods": {}
   },
