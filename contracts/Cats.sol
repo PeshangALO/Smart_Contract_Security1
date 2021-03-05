@@ -1,6 +1,6 @@
-pragma solidity >=0.4.22 <0.9.0;
+pragma solidity 0.5.2;
 
-import"./Storage.sol";
+import "./Storage.sol";
 
 contract Cats is Storage{
 
