@@ -23,11 +23,7 @@ module.exports = async function(deployer, network, accounts){
     console.log("Before Update: " + nrOfCats.toNumber())
 
     // in this way the data is saved in proxy contrcat and not in functional contract.
-
-
-
-
-
+    
     // updated the contract
     const catsupdated = await CatsUpdated.new();
     proxy.upgrade(catsupdated.address);
